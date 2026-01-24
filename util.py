@@ -51,7 +51,7 @@ def div(a: Number, b: Number) -> float:
     # 현재는 0이면 0을 반환해 조용히 실패함.
     # 요구사항: b==0이면 사용자에게 명확히 안내.
     if b == 0:
-        return 0.0
+        raise ValueError("Cannot divide by zero")
     return a / b
 
 def pow_int(a: Number, b: Number) -> Number:
