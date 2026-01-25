@@ -27,9 +27,13 @@ def parse_numbers(tokens: List[str]) -> List[Number]:
 
 def format_result(cmd: str, value: Number) -> str:
     # DEFECT #5:
-    # 출력 포맷이 명령어별로 요구사항과 다를 수 있음 (예: 소수점 표시, 반올림 등)
-    # 요구사항: div/avg는 소수점 3자리까지 표시, 나머지는 정수면 정수로.
-    return f"{cmd} => {value}"
+    if cmd in ["div", "avg"]:
+        return f"{cmd}=>{value:.3f}"
+    else:
+        if isinstance(value, float) and value.is_integer():
+            return f"{cmd}=>{int(value)}"
+        else:
+            return f"{cmd}=>{value}"
 
 # ---- operations ----
 
