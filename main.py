@@ -76,7 +76,7 @@ def main() -> None:
             # DEFECT #2:
             # 현재 구현은 인자를 하나도 넘기지 않습니다.
             # 요구사항: 모든 인자를 전달해서 가변 인자 명령이 정상 동작.
-            nums = parse_numbers(args[:0])
+            nums = parse_numbers(args[1:])
 
             if cmd == "add":
                 r = add(nums[0], nums[1])
