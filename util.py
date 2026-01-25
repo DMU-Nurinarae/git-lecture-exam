@@ -40,7 +40,7 @@ def sub(a: Number, b: Number) -> Number:
     # DEFECT #6:
     # 뺄셈이 뒤집혀 있습니다.
     # 요구사항: a - b
-    return b - a
+    return a - b
 
 def mul(a: Number, b: Number) -> Number:
     return a * b
