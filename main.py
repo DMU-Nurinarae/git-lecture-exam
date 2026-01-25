@@ -103,7 +103,7 @@ def main() -> None:
             # DEFECT #3:
             # 에러 메시지가 원인을 숨깁니다.
             # 요구사항: 예외 메시지를 그대로 보여주기.
-            print("Error occurred.")
+            print(f"Error: {e}")
 
 if __name__ == "__main__":
     main()
